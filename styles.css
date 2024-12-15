@@ -1,0 +1,116 @@
+#comentarios {
+    background: url(imagens/fundo-de-formas-de-fluxo-colorido-abstrato_91008-272.avif);
+    background-size: cover;  /* A imagem cobre toda a seção */
+    background-position: center;  /* Centraliza a imagem */
+    padding: 40px;
+    color:  #ff66b2;  /* Cor do texto */
+}
+
+
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #E0FFFF;
+    
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #ff66b2;
+}
+
+#form-opiniao {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Faz os campos ficarem em coluna (um abaixo do outro) */
+    align-items: center; /* Centraliza os campos */
+}
+
+#form-opiniao input,
+#form-opiniao textarea,
+#form-opiniao button {
+    width: 100%; /* Garante que os campos ocupem toda a largura disponível */
+    max-width: 500px; /* Limita a largura máxima */
+    padding: 10px;
+    margin-bottom: 15px; /* Espaço entre os campos */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+#form-opiniao button {
+    background-color: #ff66b2;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#form-opiniao button:hover {
+    background-color: #ff4d94; /* Cor de hover ajustada */
+}
+
+#form-opiniao input[type="text"] {
+    margin-bottom: 20px; /* Espaço extra abaixo do campo "nome" */
+}
+
+#form-opiniao textarea {
+    margin-bottom: 20px; /* Espaço extra abaixo da caixa de mensagem */
+}
+
+#lista-opinioes {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards se movam para a próxima linha */
+    gap: 20px; /* Espaço entre os cards */
+    justify-content: center; /* Alinha os cards no centro */
+}
+
+.opiniao {
+    background: url(imagens/fundocardop.jpg);
+    padding: 15px;
+    border-radius: 5px;
+    width: calc(23.33% - 20px); /* Cada card ocupará um terço do container */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    box-sizing: border-box; /* Inclui o padding no cálculo da largura */
+}
+
+.opiniao h3 {
+    margin: 0;
+    color: #ff66b2;
+}
+
+.opiniao p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.opiniao small {
+    color: #888;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* Para telas menores, vamos exibir dois cards por linha */
+    .opiniao {
+        width: calc(50% - 20px); /* Cada card ocupará metade do container */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Para telas muito pequenas, exibe um card por linha */
+    .opiniao {
+        width: 100%;
+    }
+}

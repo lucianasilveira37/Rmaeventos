@@ -1,0 +1,676 @@
+/* Estilo geral da página */
+html {
+    scroll-behavior: smooth;
+  }
+
+body {font-family: 'insaniburger', sans-serif;
+    background-color: #FFE1FF
+}
+    
+     .social icon{
+        width: 70px;
+
+     } 
+
+
+
+/* Menu */
+
+/* Cabeçalho e Navegação */
+
+/* Menu Fixo */
+#menu {
+    position: fixed; /* Fixa o menu no topo da página */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f0a0d5;
+    z-index: 900; /* Garante que o menu fique sobre outros elementos */
+    padding: 10px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo img {
+    width: 70px; /* Tamanho da logo */
+}
+
+/* Lista de Navegação */
+.nav-list {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+}
+
+/* Links de Navegação */
+.nav-list li {
+    position: relative;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.4s ease;
+    background: linear-gradient(to right, #81c4f5, #a9e6c1, #dcb1f1, #ffec5c); /* Gradiente nas cores */
+    background-clip: text;
+    -webkit-background-clip: text;
+    padding: 5px;
+}
+
+.nav-list a:hover {
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2), 0 0 25px rgba(255, 255, 255, 0.5); /* Sombra e brilho ao passar o mouse */
+    transform: scale(1.1) rotate(2deg); /* Animação de escala e rotação */
+}
+
+.nav-list a:active {
+    color: #ff4500; /* Cor ao clicar */
+    transform: scale(1.05); /* Reduz levemente a escala */
+}
+
+/* Menu Responsivo - Escondendo lista e mostrando o botão em telas pequenas */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    background-color: white;
+    height: 10px;
+    width: 10%;
+    border-radius: 5px;
+}
+
+/* Menu Mobile - Exibe o menu em telas pequenas */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+        position: absolute;
+        top: 60px; /* Distância do topo */
+        left: 0;
+        background-color: #ff66b2;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-list.open {
+        display: flex; /* Exibe o menu quando a classe "open" é adicionada */
+    }
+
+    .nav-list a {
+        font-size: 1.3rem;
+    }
+
+    .menu-toggle {
+        display: flex; /* Exibe o botão do menu em telas pequenas */
+    }
+}
+
+/* Animações para o Menu */
+.nav-list a {
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-list.open a {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Animação de Fade-in para os Links */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efeito de animação de brilho nos links */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+    50% {
+        text-shadow: 0 0 15px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+}
+
+/* Ativar o brilho quando o mouse passar */
+.nav-list a:hover {
+    animation: glow 1.5s ease-in-out infinite;
+}
+
+
+
+
+
+
+/* Seção "Sobre Nós" */
+#sobre-nos {
+    background-size: cover;  /* A imagem cobre toda a seção */
+    background-position: center;  /* Centraliza a imagem */
+    background: url(imagens/fundo-de-formas-de-fluxo-colorido-abstrato_91008-272.avif);
+    background-size: cover;
+        padding: 10px;
+    color: white;  /* Cor do texto */
+}
+
+
+
+/* Container dos blocos lado a lado */
+.sobre-nos-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que as imagens se ajustem em telas menores */
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+/* Bloco com a imagem */
+.sobre-nos-imagem {
+    flex: 1;
+    max-width: 18%;  /* Tamanho proporcional das imagens */
+    min-width: 200px; /* Largura mínima para imagens */
+    padding: 10px;
+}
+
+.sobre-nos-imagem img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover; /* Assegura que a imagem cubra a área sem distorcer */
+}
+
+/* Bloco com o conteúdo */
+.sobre-nos-conteudo {
+    padding: 20px;
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.sobre-nos-conteudo p {
+    font-size: 22px; /* Tamanho grande do texto */
+    color: #333; /* Cor escura para boa leitura */
+    line-height: 1.8; /* Espaçamento adequado entre as linhas */
+    font-family: 'Georgia', serif; /* Fonte serifada para maior elegância */
+    text-align: center;
+    margin: 20px 0;
+}
+
+
+/* Ajuste de responsividade */
+@media (max-width: 768px) {
+    .sobre-nos-container {
+        flex-direction: column;  /* Muda o layout para coluna em telas menores */
+        text-align: center;
+    }
+    
+    .sobre-nos-imagem {
+        max-width: 100%;  /* As imagens ocupam toda a largura disponível */
+        padding: 0;
+    }
+    
+    .sobre-nos-conteudo {
+        max-width: 100%;  /* O conteúdo ocupa toda a largura em telas pequenas */
+        padding: 20px;
+    }
+}
+
+/* Card em formato de nuvem */
+.nuvem-card {
+    background-color: #f0a0d5; /* Fundo branco */
+    padding: 30px;
+    border-radius: 50px; /* Bordas bem arredondadas para o efeito de nuvem */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1); /* Sombra suave para dar o efeito flutuante */
+    max-width: 700px; /* Largura máxima para o card */
+    margin: 0 auto; /* Centraliza o card */
+    font-size: 16px;
+    color: #333;
+    line-height: 1.8;
+    position: relative;
+    z-index: 10;
+}
+
+/* Sombra adicional ao redor do card para dar um toque mais "fluffy" */
+.nuvem-card::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    border-radius: 70px;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 50px 30px rgba(0, 0, 0, 0.1);
+    z-index: -1; /* Coloca a sombra atrás do card */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sobre-nos-container {
+        flex-direction: column; /* Empilha os blocos em telas menores */
+    }
+
+    .sobre-nos-imagem,
+    .sobre-nos-conteudo {
+        flex: none;
+        width: 100%;
+    }
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sobre-nos-container {
+        flex-direction: column; /* Empilha os blocos em telas menores */
+    }
+
+    .sobre-nos-imagem,
+    .sobre-nos-conteudo {
+        flex: none; /* Faz os blocos ocuparem 100% da largura */
+        width: 100%;
+    }
+}
+
+
+/* Títulos e parágrafos */
+h2 {
+    font-family: 'insaniburger', sans-serif;
+    font-size: 56px; /* Tamanho grande */
+    color: #e91e63; /* Cor rosa */
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+p {
+    text-align: center; /* Centraliza os parágrafos */
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Estilo do contêiner pai do carrossel */
+/* Seção de Carrossel */
+#carousel-wrapper {
+    margin-top: 60px;  /* Remove o espaço entre o menu e o carrossel */
+    padding-top: 10px; /* Remove o preenchimento do carrossel, se houver */
+    width: 100%;    /* Garante que o carrossel ocupe toda a largura */
+    overflow: hidden; /* Impede que a rolagem apareça */
+    position: relative;
+}
+
+#carousel-container {
+    display: flex;
+    align-items: center;  /* Alinha as imagens no centro verticalmente */
+    justify-content: center;
+    width: 100%;
+}
+
+.carousel-posts img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;  /* Garante que as imagens se ajustem bem dentro do carrossel */
+}
+
+/* Posts (imagens) do carrossel */
+.carousel-posts {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 100%;
+    height: 100%;
+    
+}
+
+
+
+/* Botões de navegação do carrossel */
+.carousel-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/* public/css/styles.css */
+
+
+
+
+form {
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+/* Estilo do botão de WhatsApp flutuante (agora sem o botão de fundo) */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;  /* Distância da parte inferior da página */
+    right: 20px;   /* Distância da parte direita da página */
+    z-index: 9999; /* Garante que o botão fique sempre visível acima do conteúdo */
+    transition: all 0.3s ease;  /* Suaviza qualquer alteração de posição ou tamanho */
+}
+
+.whatsapp-icon {
+    width: 60px;  /* Tamanho do ícone */
+    height: 60px;
+    border-radius: 50%; /* Torna a imagem redonda */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar efeito de flutuação */
+}
+
+/* Efeito de hover para a imagem */
+.whatsapp-button:hover .whatsapp-icon {
+    transform: scale(1.1); /* Aumenta o tamanho da imagem ao passar o mouse */
+    transition: transform 0.3s; /* Suaviza a transição de aumento */
+}
+/* Estilos gerais para o rodapé */
+footer {
+    background-color: white;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Conteúdo dentro do rodapé */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Links das redes sociais */
+.social-links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espaçamento entre os ícones */
+}
+
+.social-icon img {
+    width: 40px;  /* Tamanho dos ícones */
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+.social-icon1 img {
+    width: 80px;  /* Tamanho dos ícones */
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito de hover nos ícones das redes sociais */
+.social-icon:hover img {
+    transform: scale(1.1);  /* Aumenta o tamanho do ícone ao passar o mouse */
+}
+/* Estilo Geral */
+
+
+/* Estilos para a seção Galeria */
+#galeria-fotos {
+    background: url(imagens/fondo-moderno-abstracto-ondulado_1035-8514.avif);
+    background-size: cover;  /* A imagem cobre toda a seção */
+    background-position: center;  /* Centraliza a imagem */
+    color: white;  /* Cor do texto */
+}
+
+#galeria h2 {
+    font-family: 'insaniburger', sans-serif;
+    font-size: 56px; /* Tamanho grande */
+    color: #e91e63; /* Cor rosa */
+    
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+/* Contêiner da galeria */
+.galeria-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Ajuste o espaço entre os cards */
+    justify-content: center; /* Centraliza os cards */
+}
+
+/* Estilo de cada card */
+.card {
+    position: relative;
+    width: 300px; /* Largura dos cards */
+    height: 400px; /* Altura dos cards */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animações suaves */
+}
+
+/* Imagem do card */
+.card img {
+    width: 100%;
+    height: 100%; /* A imagem vai ocupar toda a altura do card */
+    object-fit: cover; /* Preenche o card sem distorcer, cortando se necessário */
+    transition: transform 0.3s ease;
+}
+
+/* Efeito de zoom ao passar o mouse na imagem */
+.card:hover img {
+    transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+}
+
+/* Efeito de foco no card (aumenta o card ao passar o mouse) */
+.card:hover {
+    transform: scale(1.05); /* Dá um pequeno efeito de zoom no card */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .card {
+        width: 250px; /* Cards menores em telas pequenas */
+        height: 350px; /* Ajuste de altura para telas menores */
+    }
+
+    #galeria h2 {
+        font-family: 'insaniburger', sans-serif;
+        font-size: 56px; /* Tamanho grande */
+        color: #e91e63; /* Cor rosa */
+        
+        font-weight: 700;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 200px;
+        height: 300px; /* Ajuste para telas ainda menores */
+    }
+
+    #galeria h2 {
+        font-family: 'insaniburger', sans-serif;
+        font-size: 56px; /* Tamanho grande */
+        color: #e91e63; /* Cor rosa */
+        
+        font-weight: 700;
+        margin-bottom: 40px;
+}
+
+}
+
+ /* Estilo básico para a videos */
+
+ #galeria-videos {
+    background:url(imagens/fundo-liso-ondulado-rosa-abstrato_41814-296.avif);
+    background-size: cover;  /* A imagem cobre toda a seção */
+    background-position: center;  /* Centraliza a imagem */
+    padding: 40px;
+    color: white;  /* Cor do texto */
+}
+
+ 
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsividade */
+    gap: 20px;
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.video-container {
+    position: relative;
+    background-color: #EE6AA7;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.video-container:hover {
+    transform: scale(1.05); /* Efeito de zoom */
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+#galeria-clientes {
+   
+ background: url(imagens/fun-colorful-seamless-pattern-creative-doodle-abstract-style-art-background-kids_573652-1775.avif);
+ background-size: cover;
+  
+}
+
+
+.galeria-clientes{
+
+    display: flex;
+    flex-wrap: wrap; /* Permite quebra de linha quando não houver espaço suficiente */
+    justify-content: center; /* Centraliza os itens */
+    gap: 30px; /* Espaçamento entre os itens */
+    padding: 60px;
+}
+
+.card2 {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    width: 150px; /* Largura fixa para os cards */
+}
+
+.card2:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card2 img {
+    width: 100%; /* Faz com que a imagem ocupe toda a largura do card */
+    height: 120px; /* Altura fixa para as imagens */
+    object-fit: contain; /* Ajusta a imagem para manter a proporção sem distorcer */
+    padding: 10px; /* Um pouco de espaço em torno da imagem */
+    transition: opacity 0.3s ease;
+}
+
+.card2 img:hover {
+    opacity: 0.8;
+}
+
+/* Responsividade com Media Queries */
+
+/* Para telas pequenas (como celulares) */
+@media (max-width: 600px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content article {
+        width: 90%;
+    }
+}
+
+/* Para telas médias (como tablets) */
+@media (max-width: 1024px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content article {
+        width: 80%;
+    }
+}
+
+/* Para telas grandes (desktops) */
+@media (min-width: 1025px) {
+    .content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .content article {
+        width: 45%;
+    }
+}
+/* Estilos gerais */
+
