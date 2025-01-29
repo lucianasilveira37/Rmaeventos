@@ -1,51 +1,128 @@
-#**Rmaeventos**
-Rmaeventos é um site animado desenvolvido para promover uma empresa especializada em venda de pipoca, algodão doce e mini donuts para diversos tipos de eventos, como aniversários, festas empresariais e eventos públicos. A empresa é movida pela paixão de oferecer produtos de alta qualidade e um atendimento excepcional, sempre com o objetivo de tornar qualquer evento ainda mais inesquecível.
+# **Relatório do Projeto -RMA EVENTOS**
+## 1. Ideia Principal do Projeto
+O site "RMA EVENTOS" foi criada com o objetivo de divulgar e vender produtos típicos de eventos, como pipocas, algodão doce e mini donuts. O site também serve como uma plataforma de promoção para a atuação da loja em festas, aniversários e outros tipos de celebrações. O principal foco da plataforma é fornecer uma experiência agradável e prática para os clientes, permitindo que eles conheçam os produtos, visualizem imagens e vídeos, além de compartilhar suas opiniões sobre os serviços prestados.
 
-A empresa nasceu de uma ideia simples, mas cheia de amor e dedicação: uma mãe que desejava oferecer à sua filha uma festa de aniversário com doces deliciosos e lembranças marcantes, além de um atendimento acolhedor e profissional. Desde então, a Rmaeventos cresceu e passou a atender todos que desejam transformar suas festas em momentos mágicos.
+O projeto foi desenvolvido com um design responsivo, oferecendo uma navegação intuitiva e acesso facilitado aos produtos e serviços. Além disso, permite que os usuários compartilhem suas opiniões, o que ajuda a melhorar a qualidade dos serviços oferecidos.
 
-🛍️ **O que oferecemos**
-Pipoca gourmet: Saborosas e crocantes, nossas pipocas são preparadas com os melhores ingredientes.
-Algodão doce: Feito na hora, com o toque perfeito de suavidade e sabor que faz sucesso entre adultos e crianças.
-Mini Donuts: Deliciosos e fresquinhos, com coberturas variadas para agradar todos os paladares.
-Além disso, nosso serviço inclui a montagem de stands e carrinhos personalizados para cada evento, com uma decoração especial para proporcionar uma experiência única aos convidados.
+## 2. Funcionalidades Principais
+A plataforma oferece as seguintes funcionalidades:
 
-🌟** Missão**
-Proporcionar aos nossos clientes experiências únicas e memoráveis por meio de produtos de alta qualidade e atendimento de excelência. Nosso compromisso vai além do sabor dos nossos doces, buscamos sempre encantar e surpreender nossos clientes com cada detalhe.
+Home: Apresentação de um carrossel com banners promocionais (descontos, novidades, e outras promoções), com o intuito de atrair e engajar os clientes.
 
-🎉 **Para quem atendemos**
-Aniversários
-Festas de empresas
-Eventos públicos e privados
-Feiras e exposições
-Nosso serviço é ideal para qualquer evento que exija sabor, diversão e um toque de carinho. Atendemos em diversas regiões, com a flexibilidade de montar o nosso espaço onde o cliente precisar.
+Sobre Nós: Uma seção informativa sobre a missão da empresa, sua história e os valores que orientam o trabalho da loja. Inclui imagens da equipe e do ambiente de trabalho.
 
-🖥️** Funcionalidades do site**
-Animações dinâmicas: O site é completamente animado, proporcionando uma experiência divertida e interativa ao usuário.
-Galeria de eventos: Veja as fotos de eventos passados e descubra como a Rmaeventos pode transformar sua festa.
-Formulário de contato: Entre em contato diretamente conosco para agendar um evento ou pedir mais informações.
-Testemunhos de clientes: Depoimentos de pessoas que confiaram na nossa empresa para tornar seus eventos ainda mais especiais.
-🚀 Tecnologias utilizadas
-HTML5 - Para a estrutura do site.
-CSS3 (com animações) - Para o estilo e design visual do site.
-JavaScript (com animações e interatividade) - Para melhorar a experiência do usuário.
-Bootstrap - Framework para garantir a responsividade do site em todos os dispositivos.
-🛠️ Como rodar o projeto localmente
-Clone o repositório:
+Galeria de Fotos: Apresentação de imagens dos produtos e dos eventos realizados, para mostrar aos clientes a qualidade e a variedade dos serviços oferecidos.
 
-bash
-Copiar código
-git clone https://github.com/usuario/rmaeventos.git
-Abra o projeto em seu editor de código preferido.
+Galeria de Vídeos: Área dedicada a vídeos da loja, produtos e clientes que utilizaram os serviços em eventos, para dar uma noção mais detalhada de como os produtos são preparados e apresentados.
 
-Abra o arquivo index.html em seu navegador para visualizar o site.
+Galeria de Clientes: Exibição de imagens de clientes e parceiros da loja, ajudando a construir credibilidade e confiança no serviço oferecido.
 
-💬 Contribuições
-Sinta-se à vontade para contribuir com melhorias e correções! Se você tiver alguma sugestão ou encontrar um bug, crie uma issue ou envie um pull request.
+Formulário de Opiniões: Permite que os clientes compartilhem suas experiências sobre os produtos e serviços, oferecendo feedback valioso para melhorar o atendimento e a qualidade dos serviços.
 
-📞 Entre em contato
-E-mail: contato@rmaeventos.com.br
-Instagram: @rmaeventos
-Facebook: Rmaeventos
-Transforme seu evento com os doces e a animação que só a Rmaeventos pode oferecer. Fique à vontade para explorar o nosso site e nos enviar uma mensagem com suas dúvidas ou solicitações. Estamos prontos para tornar o seu evento inesquecível! 🎉🍿🍭
+WhatsApp: Link direto para comunicação com a loja via WhatsApp, facilitando a interação com os clientes e a realização de pedidos.
 
-Esse é um modelo de README simples e direto, mas você pode adaptá-lo conforme necessário para incluir mais informações específicas ou funcionalidades técnicas do seu projeto!
+## 3. Arquitetura do Sistema
+O sistema foi estruturado em três partes principais:
+
+### 3.1. Front-End (Interface do Usuário)
+Desenvolvimento utilizando HTML, CSS e JavaScript.
+Implementação de carrosséis de imagens e vídeos, além de integração com APIs externas (como YouTube).
+Formulário de submissão de opiniões com envio de dados para o back-end.
+Links para redes sociais e integração com o WhatsApp para facilitar a comunicação.
+### 3.2. Back-End (Servidor e API)
+Utilização de Node.js para a criação de uma API que lida com armazenamento e recuperação das opiniões enviadas pelos clientes.
+Endpoints principais:
+GET /opinioes: Para buscar todas as opiniões enviadas pelos clientes.
+POST /opinioes: Para enviar uma nova opinião com o nome e a mensagem do cliente.
+### 3.3. Banco de Dados
+O banco de dados utiliza PostgreSQL para armazenar as opiniões dos clientes. A tabela opinioes foi criada com as seguintes colunas:
+
+
+CREATE TABLE opinioes (
+    id SERIAL PRIMARY KEY,         -- Identificador único para cada comentário
+    nome VARCHAR(100),             -- Nome do cliente que deixou a opinião
+    mensagem TEXT,                 -- Texto da opinião
+    data TIMESTAMP DEFAULT CURRENT_TIMESTAMP  -- Data e hora de envio (automática)
+);
+## 4. Tecnologias Utilizadas
+### 4.1. Linguagens
+HTML: Para a estruturação da página web.
+CSS: Para o estilo visual e a criação de uma interface responsiva.
+JavaScript: Para interação dinâmica na página, incluindo o carrossel de imagens e a submissão de opiniões.
+### 4.2. Banco de Dados
+PostgreSQL: Utilizado para armazenar as opiniões dos clientes. O banco de dados é estruturado com uma tabela chamada opinioes, que armazena informações como nome, mensagem e data de envio.
+### 4.3. Frameworks
+Node.js: Utilizado para o desenvolvimento da API back-end, que permite criar endpoints e gerenciar a comunicação com o banco de dados.
+Express.js: Framework utilizado para facilitar a criação dos endpoints da API e o gerenciamento de rotas.
+### 4.4. APIs
+API do YouTube: Para exibição de vídeos na galeria de vídeos, permitindo que os vídeos sejam integrados diretamente na plataforma.
+WhatsApp API: Para fornecer um link de contato direto via WhatsApp, facilitando a comunicação entre clientes e loja.
+
+##5. Funcionamento do Sistema
+### 5.1. Telas (Front-End)
+Home: Apresenta um carrossel de imagens com banners promocionais, como descontos e novidades, permitindo que o cliente veja as ofertas da loja de forma dinâmica.
+![Captura de tela 2025-01-28 210638](https://github.com/user-attachments/assets/544c206b-c8d7-4128-904e-8a5945385feb)
+
+
+
+Sobre Nós: Seção informativa que conta a história da loja, seus diferenciais e a missão de oferecer produtos de qualidade para eventos.
+![Captura de tela 2025-01-28 210259](https://github.com/user-attachments/assets/458a85fc-76bd-4145-8650-71ca22adb292)
+
+Galeria de Fotos: Apresentação de imagens dos produtos e eventos, permitindo que o cliente tenha uma visão realista da qualidade do serviço.
+![Captura de tela 2025-01-28 210347](https://github.com/user-attachments/assets/34a0166b-9122-4b50-992f-000569c97d7f)
+
+Galeria de Vídeos: Área dedicada a vídeos que mostram a loja em ação, os produtos sendo preparados e momentos dos eventos realizados.
+![Captura de tela 2025-01-28 210411](https://github.com/user-attachments/assets/74926982-9548-4728-9596-2ddb37805b95)
+
+Galeria de Clientes: Apresentação de clientes e parceiros satisfeitos com os serviços da loja, ajudando a criar confiança e credibilidade.
+![Captura de tela 2025-01-28 210439](https://github.com/user-attachments/assets/4d037d05-bb06-4ed5-a91c-c35df2564fdd)
+
+Comentários: Área para que os clientes deixem suas opiniões sobre os serviços, contribuindo para o feedback e a melhoria contínua da empresa.
+![Captura de tela 2025-01-28 210511](https://github.com/user-attachments/assets/6bcad56a-9dbc-4a51-afef-7c25bd0aa903)
+
+### 5.2. Endpoints (Back-End)
+
+GET /opinioes: Endpoint que retorna todas as opiniões enviadas pelos clientes.
+
+// Rota para obter opiniões
+app.get('/opinioes', async (req, res) => {
+    try {
+        const opinioes = await Opinioes.findAll();  // Certifique-se de que 'Opinioes' está correto
+        res.json(opinioes);  // Retorna todas as opiniões do banco de dados
+    } catch (err) {
+        console.error('Erro ao buscar opiniões:', err);
+        res.status(500).send('Erro ao buscar opiniões');  // Resposta em caso de erro
+    }
+});
+
+POST /opinioes: Endpoint que permite o envio de novas opiniões com nome e mensagem dos clientes.
+
+// Rota para enviar opinião
+app.post('/opinioes', async (req, res) => {
+    try {
+        const { nome, mensagem } = req.body;
+
+        // Verificando se os campos 'nome' e 'mensagem' existem no corpo da requisição
+        if (!nome || !mensagem) {
+            return res.status(400).send('Nome e mensagem são obrigatórios.');
+        }
+
+        const novaOpiniao = await Opinioes.create({ nome, mensagem });  // Criação da nova opinião
+        res.status(201).json(novaOpiniao);  // Retorna a nova opinião criada com status 201
+    } catch (err) {
+        console.error('Erro ao enviar a opinião:', err);
+        res.status(500).send('Erro ao enviar a opinião');  // Resposta em caso de erro
+    }
+});
+### 5.3. Banco de Dados
+A tabela opinioes é responsável por armazenar as opiniões enviadas pelos clientes, com os seguintes campos:
+
+id: Identificador único para cada opinião.
+nome: Nome do cliente que deixou a opinião.
+mensagem: Conteúdo da opinião.
+data: Data e hora de envio da opinião.
+
+## 6. Conclusão
+O projeto "RMA Eventos" foi desenvolvido para ser uma plataforma atrativa e funcional, oferecendo aos clientes uma experiência única e personalizada. O site não apenas permite a venda de produtos típicos para eventos, como pipocas, algodão doce e mini donuts, mas também proporciona uma área interativa, onde os clientes podem visualizar imagens e vídeos, compartilhar suas opiniões e entrar em contato diretamente com a loja via WhatsApp.
+
+As tecnologias utilizadas no desenvolvimento, como Node.js, Express.js, PostgreSQL, e integração com APIs externas (YouTube, WhatsApp), garantem um sistema eficiente e fluido, tanto no front-end quanto no back-end. A principal meta da plataforma é não apenas gerar vendas, mas também criar um vínculo mais estreito com os clientes, proporcionando uma experiência de compra agradável e confiável.
